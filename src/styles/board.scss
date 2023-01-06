@@ -1,0 +1,13 @@
+@import './variables.scss';
+
+.board {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    border: 2px solid rgb(104, 106, 184);
+    background-color: white;
+}
