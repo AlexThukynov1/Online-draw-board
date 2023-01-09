@@ -15,12 +15,18 @@ const Board = observer(() => {
         ToolState.setTool(new Brush(CanvasState.canvas))
         // ToolState.setTool(new Brush(CanvasState.canvas))
     }, []);
+
+    const mouseDownHeandler = () => {
+        CanvasState.addToUndo(canvasRef.current.toDataURL())
+        console.log('add')
+    }
     
     return (
         <div className='board'>
             <canvas
+                onMouseDown={() =>mouseDownHeandler()}
                 ref={canvasRef}
-                width={850}
+                width={1250}
                 height={650}
             />
         </div>
